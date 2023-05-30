@@ -1,0 +1,7 @@
+.food-list {
+    margin-top: 50px !important;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 20px;
+}

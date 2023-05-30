@@ -1,0 +1,21 @@
+.order-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+
+    span {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .counter-control {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+}

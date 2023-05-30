@@ -1,0 +1,29 @@
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 12px 15px;
+    border-radius: 30px;
+    .order-item-info {
+        display: flex;
+        align-items: center;    
+        column-gap: 8px;
+        .order-item-img {
+            overflow: hidden;   
+            max-width: 150px;
+            height: 80px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .order-item-price {
+        font-weight: 500;
+        font-size: 25px;
+        color: #9A9A9A;
+    }
+}

@@ -1,0 +1,17 @@
+.product-filters {
+    margin-top: 50px !important;
+    display: flex;
+    justify-content: space-between;
+
+    .shop-list-filter {
+        max-width: 70%;
+        // overflow-x: scroll;
+        display: flex;
+        column-gap: 8px;
+
+        .active-filter {
+            background: #000;
+            color: #fff;
+        }
+    }
+}

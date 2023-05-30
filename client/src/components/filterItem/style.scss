@@ -1,0 +1,11 @@
+.filter-item {
+    cursor: pointer;
+    background: #DBDBDB;
+    border-radius: 30px;
+    padding: 12px 18px;
+    font-weight: 500;
+    transition: all .3s;
+    &:hover {
+        background: #C6C6C6;
+    }
+} 

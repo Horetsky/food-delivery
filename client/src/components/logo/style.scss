@@ -1,0 +1,8 @@
+@import './../../app/vars.scss';
+.app-logo {
+    font-size: 30px;
+    font-weight: 900;
+    span {
+        color: $accent-color;
+    }
+}
