@@ -9,6 +9,9 @@
         display: flex;
         align-items: center;    
         column-gap: 8px;
+        .del-oreder-btn {
+            width: 50px;
+        }
         .order-item-img {
             overflow: hidden;   
             max-width: 150px;

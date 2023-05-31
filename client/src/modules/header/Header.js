@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../../router/routes";
 import Logo from "../../components/logo/Logo";
@@ -8,13 +8,13 @@ import Cart from "../../components/cart/Cart";
 
 import './style.scss'
 const Header = () => {
-    const [cartSum, setCartSum] = useState(0)
+    const dispatch = useDispatch()
     const {
-        orderList
+        orderList,
+        orderSum
     } = useSelector(state => state.orderListSlice)
-
     useEffect(() => {
-        setCartSum(orderList.reduce((acc, item) => acc + item.price, 0))
+        dispatch({type: "SET_ORDER_SUM", payload: orderList.reduce((acc, item) => acc + item.price, 0)})
     }, [orderList])
     return (
         <div className="app-main-container app-header">
@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <NavLink to={ROUTES.cart}>
                 <Cart 
-                    sum={cartSum}
+                    sum={orderSum}
                     count={orderList.length}
                 />
             </NavLink>

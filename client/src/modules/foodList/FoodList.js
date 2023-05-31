@@ -1,59 +1,54 @@
 import { useEffect, useState } from "react";
-import { transformFoodItems } from "../../utils/_transformData";
 import { useSelector, useDispatch } from "react-redux";
-import ProductCard from "../../components/productCard/ProductCard";
+
+import { fetchFoodList } from "./helpers/thunk";
 import useHttp from "../../utils/useHttps";
+
+import ProductCard from "../../components/productCard/ProductCard";
 
 import './style.scss'
 
 const FoodList = () => {
-    const [foodItems, setFoodItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState([])
     const dispatch = useDispatch()
+    const { getRequest } = useHttp()
+
+    const { 
+        reload, 
+        foodList 
+    } = useSelector(state => state.foodListSlice)
     const {
         activeFilter
     } = useSelector(state => state.productFilters)
     const {
-        orderList
+        orderList,
+        shopLock
     } = useSelector(state => state.orderListSlice)
-    const { getRequest } = useHttp()
 
     useEffect(() => {
-        getFoodItems()
-    }, [])
-
+        if (!reload) return;
+        dispatch(fetchFoodList(getRequest));
+    }, [dispatch, reload])
     useEffect(() => {
         filterProducts()
     }, [activeFilter])
-
-    useEffect(() => {
-
-    }, [orderList])
-
+    
     const filterProducts = () => {
         if(activeFilter === 'all') {
             setFilteredItems([])
         }
-        setFilteredItems(foodItems.filter(item => item.shop[0].name === activeFilter))
-    }
-
-    const getFoodItems = async () => {
-        const shops = await getRequest('http://localhost:5000/shops')
-                                .then(res => res.map(item => ({
-                                    id: item.id,
-                                    name: item.name
-                                })))
-        getRequest('http://localhost:5000/products')
-            .then(res => res.map(item => transformFoodItems(item, shops)))
-            .then(setFoodItems)
-            
+        setFilteredItems(foodList.filter(item => item.shop[0].name === activeFilter))
     }
 
     const setOrder = (prop, isOrdered) => {
         if (isOrdered) {
             dispatch({type:"REMOVE_ORDER_ITEM", payload: orderList.filter(item => item.id !== prop.id)})
+            if (orderList.length === 1) {
+                dispatch({type: "SET_SHOP_LOCK", payload: 'none'})
+            }
         } else {
             dispatch({type: "SET_ORDER_ITEM", payload: prop})
+            dispatch({type: "SET_SHOP_LOCK", payload: prop.shop[0].id})
         }
     }
     
@@ -61,7 +56,7 @@ const FoodList = () => {
         <div className="app-main-container food-list">
                 {
                     filteredItems.length === 0 ?
-                    foodItems.map(item => (
+                    foodList.map(item => (
                         <ProductCard
                             key={item.id}
                             id={item.id}
@@ -71,6 +66,7 @@ const FoodList = () => {
                             price={item.price}
                             func={setOrder}
                             isOrdered={orderList.filter(order => order.id === item.id).length > 0}
+                            shopLock={shopLock}
                         />
                     )) : 
                     filteredItems.map(item => (
@@ -83,6 +79,7 @@ const FoodList = () => {
                             price={item.price}
                             func={setOrder}
                             isOrdered={orderList.filter(order => order.id === item.id).length > 0}
+                            shopLock={shopLock}
                         />
                     ))
                 }

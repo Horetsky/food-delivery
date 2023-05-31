@@ -13,7 +13,7 @@ const Cart = () => {
             <div className='app-main-container order-container'>
                 <div className='order-form'>
                     <OrderMap />
-                    <OrderForm />
+                    {/* <OrderForm /> */}
                 </div>
                 <OrderList />
             </div>

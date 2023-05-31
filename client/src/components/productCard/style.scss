@@ -46,6 +46,8 @@
             .product-price {
                 font-weight: 500;
             }
+
+            
             button {
                 display: flex;
                 align-items: center;
@@ -77,4 +79,9 @@
         }
     }
 
+}
+
+.shop-disable-order {
+    opacity: 0.3;
+    pointer-events: none;
 }
