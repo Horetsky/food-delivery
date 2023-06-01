@@ -54,7 +54,7 @@ const FoodList = () => {
     }
     
     return (
-        <div className="app-main-container food-list">
+        <div className="food-list">
                 {
                     filteredItems.length === 0 ?
                     foodList.map(item => (

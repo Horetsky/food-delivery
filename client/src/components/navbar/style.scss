@@ -6,13 +6,15 @@
     a {
         font-size: 20px;
         font-weight: 500;
+        padding-bottom: 2px;
         transition: all .3s;
         &:hover {
             color: $accent-color;
         }
     }
-    // .active {
-    //     color: $accent-color;
-    // }
+    .active {
+        color: $accent-color;
+        border-bottom: 2px solid $accent-color;
+    }
 
 }

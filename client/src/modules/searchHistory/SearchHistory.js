@@ -22,8 +22,9 @@ const SearchHistory = () => {
         <>
             <form className='history-search-form'>
             <div className="order-input-item">
-                <span>Номер телефону</span>
-                <input placeholder='Адреса' required value={searchVal}
+                <h1 className='order-search-title'>Історія замовлень</h1>
+                <span className='order-search-caption'>Введіть номер телефону, щоб ми знайшли ваші замовлення</span>
+                <input placeholder='Номер телефону' required value={searchVal}
                     onChange={e => setSearchVal(e.target.value)}
                 />
             </div>

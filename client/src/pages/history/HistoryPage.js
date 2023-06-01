@@ -5,10 +5,7 @@ const HistoryPage = () => {
         <div>
             <Header />
             <div className='app-main-container'>
-                <div className='order-form'>
-                    <SearchHistory />
-                </div>
-                {/* <OrderList /> */}
+                <SearchHistory />
             </div>
         </div>
     );

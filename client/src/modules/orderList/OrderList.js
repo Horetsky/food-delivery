@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import OrderItem from "../../components/orderItem/OrderItem";
-
+import EmptyCart from "../../components/emptyCart/EmptyCart";
 import './style.scss';
 
 const OrderList = () => {
@@ -26,8 +26,12 @@ const OrderList = () => {
     const delOrderItem = (prop) => {
         dispatch({type:"REMOVE_ORDER_ITEM", payload: orderList.filter(item => item.id !== prop)})
     }
+
     return (
         <div className="order-list-wrapper">
+            {
+                orderList.length === 0 ? <EmptyCart /> : null
+            }
             {
                 orderList?.map(item => (
                     <OrderItem

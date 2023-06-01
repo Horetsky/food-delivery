@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { ROUTES } from "../../router/routes";
 import Logo from "../../components/logo/Logo";
 import Navbar from "../../components/navbar/Navbar";
@@ -9,6 +9,7 @@ import Cart from "../../components/cart/Cart";
 import './style.scss'
 const Header = () => {
     const dispatch = useDispatch()
+    const location = useLocation()
     const {
         orderList,
         orderSum
@@ -22,7 +23,7 @@ const Header = () => {
                 <NavLink to={ROUTES.app}>
                     <Logo />
                 </NavLink>
-                <Navbar activePage='cart'/>
+                <Navbar activePage={location.pathname}/>
             </div>
             <NavLink to={ROUTES.cart}>
                 <Cart 

@@ -9,6 +9,8 @@ import {
 
 import './style.scss'
 import { useEffect, useState, useRef } from 'react';
+import OrderThanks from '../../components/orderThanks/OrderThanks';
+import OrderFaild from '../../components/orderThanks/OrderFaild';
 
 const API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 
@@ -39,18 +41,9 @@ const defaultPalce = {
 }
 
 const Map = () => {
-    const [orderMarkers, setOrderMarkers] = useState()
     const {
         destination
     } = useSelector(state => state.orderMapSlice)
-    useEffect(() => {
-        setMarkers()
-    }, [destination])
-
-    const setMarkers = () => {
-        const markers = destination.map(item => <Marker position={item} />)
-        setOrderMarkers(markers)
-    }
       
     return (
         <GoogleMap
@@ -63,7 +56,6 @@ const Map = () => {
             mapTypeControl: false,
             fullscreenControl: false,
           }}
-          onLoad={setMarkers}
       >
 
         {
@@ -75,6 +67,8 @@ const Map = () => {
 }
 
 const OrderForm = () => {
+    const [orderStatus, setOrderSatus] = useState(null)
+
     const userAddress = useRef();
     const userEmail = useRef();
     const userPhone = useRef();
@@ -91,7 +85,7 @@ const OrderForm = () => {
         e.preventDefault()
         if (userAddress.current.value === '' || orderList.length === 0) return
         axios
-            .post('http://localhost:5000/order', {
+            .post(`${process.env.REACT_APP_SERVER_URL}order`, {
                 orderSum,
                 address: userAddress.current.value,
                 shop: orderList[0].shop.map(shop => ({
@@ -121,8 +115,12 @@ const OrderForm = () => {
                 formRef.current.reset();
                 dispatch({type:"REMOVE_ORDER_ITEM", payload: orderList.filter(item => item.id === null)})
                 dispatch({type: "SET_SHOP_LOCK", payload: 'none'})
+                setOrderSatus('success')
             })
-            .catch(e => console.log(e))
+            .catch(e => {
+                console.log(e)
+                setOrderSatus('faild')
+            })
 
     }
 
@@ -155,10 +153,27 @@ const OrderForm = () => {
             </div>
             
             <div className='order-submit'>
-                <span>До сплати: {orderSum} грн</span>
-                <button type='submit'
-                    onClick={(e) => submitOrder(e)}
-                >Замовити</button>
+                {                 
+                    orderStatus === 'success' ?
+                    <OrderThanks /> :
+                    orderStatus === 'faild' ?
+                    <OrderFaild /> : <span>До сплати: {orderSum} грн</span> 
+                }
+                {
+                    orderList.length === 0 ? null :
+                    !orderStatus ?
+                    <button type='submit'
+                        onClick={(e) => submitOrder(e)}
+                    >Замовити</button>
+                    :
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setOrderSatus(null)
+                        }}
+                    >
+                        Готово</button>
+                }
             </div>
             
         </form>

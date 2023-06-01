@@ -14,13 +14,13 @@ const ProductFilters = () => {
     }, [])
     
     const getShops = async () => {
-        getRequest('http://localhost:5000/shops')
+        getRequest('shops')
             .then(res => res.map(transformShopFilters))
             .then(setShops)
     }
 
     return (
-        <div className='app-main-container product-filters'>
+        <div className='product-filters'>
             <Filters shops={shops}/>
             {/* <Sort /> */}
         </div>

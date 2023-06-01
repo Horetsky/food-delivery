@@ -3,11 +3,11 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     row-gap: 30px;
     background: #fff;
     max-width: 290px;
-    // height: 390px;
+    max-height: 350px;
+
     height: fit-content;
     border-radius: 20px;
     padding: 20px;

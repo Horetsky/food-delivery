@@ -8,8 +8,10 @@ const Home = () => {
     return (
         <div>
             <Header />
-            <ProductFilters />
-            <FoodList />
+            <div className='app-main-container'>
+                <ProductFilters />
+                <FoodList />
+            </div>
         </div>
     );
 };

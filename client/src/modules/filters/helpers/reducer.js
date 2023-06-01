@@ -1,8 +1,5 @@
 const defaultState = {
-    reload: true,
     activeFilter: 'all',
-    // moreFromArtist: [],
-    // loadingStatus: 'idle'
 }
 
 export const productFilters = (state = defaultState, action) => {

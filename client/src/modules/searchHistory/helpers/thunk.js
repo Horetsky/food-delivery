@@ -5,7 +5,7 @@ import {
 export const fetchOrderHistory = (request, number) => async(dispatch) => {
     dispatch(setLoadingStatus('loading'))
     try {
-        const orderHistory = await request('http://localhost:5000/orderHistory')
+        const orderHistory = await request('orderHistory')
                             .then(res => res.filter(item => item.order.user.phone.includes(number) && number > 0))
                             .then(data => data.map(transformOrderHistory))
 
