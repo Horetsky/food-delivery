@@ -8,7 +8,8 @@ export const fetchFoodList = (request) => async(dispatch) => {
         const shops = await request('http://localhost:5000/shops')
                                 .then(res => res.map(item => ({
                                     id: item.id,
-                                    name: item.name
+                                    name: item.name,
+                                    location: item.location.map(loc => ({lat: +loc.split(', ')[0], lng: +loc.split(', ')[1]}))
                                 })));
         const food = await request('http://localhost:5000/products')
                                 .then(res => res.map(item => transformFoodItems(item, shops)))

@@ -16,7 +16,7 @@ const OrderList = () => {
         setOrderSum(orderList.reduce((acc, item) => acc + item.price, 0))
         if (orderList.length === 0) {
             dispatch({type: "SET_SHOP_LOCK", payload: 'none'})
-        } 
+        }
     }, [orderList])
 
     useEffect(() => {

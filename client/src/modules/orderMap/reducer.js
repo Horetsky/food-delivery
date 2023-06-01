@@ -1,6 +1,6 @@
 const defaultState = {
     origin: '',
-    destination: '',
+    destination: [],
     route: null
 }
 

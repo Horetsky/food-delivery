@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const fs = require('fs');
+const crypto = require("crypto")
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -15,6 +17,39 @@ app.get("/products", (req, res) => {
 })
 app.get("/shops", (req, res) => {
     res.json(db.shops)
+})
+
+app.post("/order", (req, res) => {
+    fs.readFile('./db.json', 'utf8', (error, data) => {
+        if(error){
+           console.log(error);
+           return;
+        }
+        writeData(JSON.parse(data))
+   })
+   
+   const writeData = (data) => {
+    const uuid = crypto.randomUUID()
+    const arr = []
+    arr.push(...data.orderHistory)
+
+    const history = arr.push({
+        "id": uuid,
+        "order": req.body
+    })
+
+    const config = {
+        ...data,
+        orderHistory: arr
+    }
+
+    try {
+        fs.writeFileSync('./db.json', JSON.stringify(config, null, 2), 'utf8');
+        console.log('Data successfully saved to disk');
+      } catch (error) {
+        console.log('An error has occurred ', error);
+      }
+   }
 })
 
 // Serve the static files from the React app

@@ -1,178 +1,190 @@
 {
-    "products": [
-        {
-            "id": 0,
-            "name": "Біг Мак",
-            "shop": 89,
-            "thumbnail": "https://s7d1.scene7.com/is/image/mcdonalds/BIG_MAC:product-header-desktop?wid=829&hei=455&dpr=off",
-            "price": 189
-        },
-        {
-            "id": 1,
-            "name": "Дабл Чізбургер",
-            "shop": 89,
-            "thumbnail": "https://s7d1.scene7.com/is/image/mcdonalds/SdwchDoubleCheeseburger:product-header-desktop?wid=830&hei=458&dpr=off",
-            "price": 98
-        },
-        {
-            "id": 2,
-            "name": "Чікен Рол",
-            "shop": 89,
-            "thumbnail": "https://s7d1.scene7.com/is/image/mcdonalds/chicken_roll:product-header-desktop?wid=829&hei=455&dpr=off",
-            "price": 120
-        },
-        {
-            "id": 3,
-            "name": "БАКЕТ ДУЕТ ГОСТРИЙ",
-            "shop": 88,
-            "thumbnail": "https://www.kfc-ukraine.com/admin/files/4092.png",
-            "price": 130
-        },
-        {
-            "id": 4,
-            "name": "БАКЕТ ФРІ",
-            "shop": 88,
-            "thumbnail": "https://www.kfc-ukraine.com/admin/files/3833.jpg",
-            "price": 86
-        },
-        {
-            "id": 5,
-            "name": "БУРГЕР КЛАСІК",
-            "shop": 88,
-            "thumbnail": "https://www.kfc-ukraine.com/admin/files/4191.png",
-            "price": 60
-        },
-        {
-            "id": 6,
-            "name": "Кебаб XL",
-            "shop": 87,
-            "thumbnail": "https://static.wixstatic.com/media/62503d_65f1ac2d0deb4519a58319a7686b3d5f~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/62503d_65f1ac2d0deb4519a58319a7686b3d5f~mv2.jpg",
-            "price": 160
-        },
-        {
-            "id": 7,
-            "name": "Крильця кріспі",
-            "shop": 87,
-            "thumbnail": "https://static.wixstatic.com/media/62503d_811a6468acef43099c2a6015bb205adb~mv2.jpeg/v1/fill/w_625,h_469,al_c,lg_1,q_80,enc_auto/62503d_811a6468acef43099c2a6015bb205adb~mv2.jpeg",
-            "price": 110
-        },
-        {
-            "id": 8,
-            "name": "Салат від шефа",
-            "shop": 87,
-            "thumbnail": "https://static.wixstatic.com/media/62503d_843efb68212b401a999536f01717230c~mv2.png/v1/fill/w_625,h_834,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/62503d_843efb68212b401a999536f01717230c~mv2.png",
-            "price": 115
-        },
-        {
-            "id": 9,
-            "name": "Halytskyi",
-            "shop": 86,
-            "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2021/12/Galytskyj.png",
-            "price": 65
-        },
-        {
-            "id": 10,
-            "name": "Strudel",
-            "shop": 86,
-            "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/10/838h449_shtrudel_sajt.png",
-            "price": 65
-        },
-        {
-            "id": 11,
-            "name": "Drunk Cherry",
-            "shop": 86,
-            "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/Ostannya-Pyana-vyshnya-na-dodatok.png",
-            "price": 69
-        },
-        {
-            "id": 12,
-            "name": "Oreo Cream Latte",
-            "shop": 86,
-            "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/krem-late-oreo.png",
-            "price": 55
-        },
-        {
-            "id": 13,
-            "name": "Snickers Cream Latte",
-            "shop": 86,
-            "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/krem-late-snikers.png",
-            "price": 55
-        },
-        {
-            "id": 14,
-            "name": "Banana & Berry Milkshake",
-            "shop": 86,
-            "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/molochno-yagidnyj.png",
-            "price": 59
-        },
-        {
-            "id": 15,
-            "name": "Піца Bianco Verde",
-            "shop": 85,
-            "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/A7493501-0C16-11ED-A793-1739108D572E-1969%D1%851100_0001_Bianco-Verde.png?alt=media&token=c2d7c3dc-3211-4b9f-b5a2-7cdffce981fa&w=991&h=700&format=webp&mode=fit&q=60",
-            "price": 279
-        },
-        {
-            "id": 16,
-            "name": "Піца Карбонара",
-            "shop": 85,
-            "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/BC937B41-0C12-11ED-A793-1739108D572E-1969%D1%851100_0005_%D0%9A%D0%B0%D1%80%D0%B1%D0%BE%D0%BD%D0%B0%D1%80%D0%B0-%D0%B7-%D0%BF%D0%BE%D0%BC%D1%96%D0%B4%D0%BE%D1%80%D0%B0%D0%BC%D0%B8-%D1%87%D0%B5%D1%80%D1%96.png?alt=media&token=7046da0c-c596-4032-86dc-ffd7824b40a6&w=991&h=700&format=webp&mode=fit&q=60",
-            "price": 249
-        },
-        {
-            "id": 17,
-            "name": "Піца Маргарита",
-            "shop": 85,
-            "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/59A87E81-0C13-11ED-A686-93C9D3D494AC-1969%D1%851100_0004_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0.png?alt=media&token=14740ecf-8505-4897-84fc-7e2a2d55b163&w=991&h=700&format=webp&mode=fit&q=60",
-            "price": 129
-        },
-        {
-            "id": 18,
-            "name": "Піца Пепероні",
-            "shop": 85,
-            "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/CC2B10C1-0C1E-11ED-819F-49BE3BB04282-1969%D1%851100_0008_%D0%9F%D0%B5%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D1%96_%D1%81%D0%B6%D0%B0%D1%82%D0%B8%D0%B9.png?alt=media&token=0004383d-4148-41eb-988d-e6f8c82ff9f4&w=991&h=700&format=webp&mode=fit&q=60",
-            "price": 199
-        },
-        {
-            "id": 19,
-            "name": "Піца Цезаре Verde",
-            "shop": 85,
-            "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/D50008C1-0C11-11ED-A793-1739108D572E-1969%D1%851100_0006_%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D0%B5-Verde.png?alt=media&token=bdf6ac82-177a-461b-8f29-3348182266ed&w=991&h=700&format=webp&mode=fit&q=60",
-            "price": 249
-        }
-        
-    ],
+  "products": [
+    {
+      "id": 0,
+      "name": "Біг Мак",
+      "shop": 89,
+      "thumbnail": "https://s7d1.scene7.com/is/image/mcdonalds/BIG_MAC:product-header-desktop?wid=829&hei=455&dpr=off",
+      "price": 189
+    },
+    {
+      "id": 1,
+      "name": "Дабл Чізбургер",
+      "shop": 89,
+      "thumbnail": "https://s7d1.scene7.com/is/image/mcdonalds/SdwchDoubleCheeseburger:product-header-desktop?wid=830&hei=458&dpr=off",
+      "price": 98
+    },
+    {
+      "id": 2,
+      "name": "Чікен Рол",
+      "shop": 89,
+      "thumbnail": "https://s7d1.scene7.com/is/image/mcdonalds/chicken_roll:product-header-desktop?wid=829&hei=455&dpr=off",
+      "price": 120
+    },
+    {
+      "id": 3,
+      "name": "БАКЕТ ДУЕТ ГОСТРИЙ",
+      "shop": 88,
+      "thumbnail": "https://www.kfc-ukraine.com/admin/files/4092.png",
+      "price": 130
+    },
+    {
+      "id": 4,
+      "name": "БАКЕТ ФРІ",
+      "shop": 88,
+      "thumbnail": "https://www.kfc-ukraine.com/admin/files/3833.jpg",
+      "price": 86
+    },
+    {
+      "id": 5,
+      "name": "БУРГЕР КЛАСІК",
+      "shop": 88,
+      "thumbnail": "https://www.kfc-ukraine.com/admin/files/4191.png",
+      "price": 60
+    },
+    {
+      "id": 6,
+      "name": "Кебаб XL",
+      "shop": 87,
+      "thumbnail": "https://static.wixstatic.com/media/62503d_65f1ac2d0deb4519a58319a7686b3d5f~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/62503d_65f1ac2d0deb4519a58319a7686b3d5f~mv2.jpg",
+      "price": 160
+    },
+    {
+      "id": 7,
+      "name": "Крильця кріспі",
+      "shop": 87,
+      "thumbnail": "https://static.wixstatic.com/media/62503d_811a6468acef43099c2a6015bb205adb~mv2.jpeg/v1/fill/w_625,h_469,al_c,lg_1,q_80,enc_auto/62503d_811a6468acef43099c2a6015bb205adb~mv2.jpeg",
+      "price": 110
+    },
+    {
+      "id": 8,
+      "name": "Салат від шефа",
+      "shop": 87,
+      "thumbnail": "https://static.wixstatic.com/media/62503d_843efb68212b401a999536f01717230c~mv2.png/v1/fill/w_625,h_834,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/62503d_843efb68212b401a999536f01717230c~mv2.png",
+      "price": 115
+    },
+    {
+      "id": 9,
+      "name": "Halytskyi",
+      "shop": 86,
+      "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2021/12/Galytskyj.png",
+      "price": 65
+    },
+    {
+      "id": 10,
+      "name": "Strudel",
+      "shop": 86,
+      "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/10/838h449_shtrudel_sajt.png",
+      "price": 65
+    },
+    {
+      "id": 11,
+      "name": "Drunk Cherry",
+      "shop": 86,
+      "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/Ostannya-Pyana-vyshnya-na-dodatok.png",
+      "price": 69
+    },
+    {
+      "id": 12,
+      "name": "Oreo Cream Latte",
+      "shop": 86,
+      "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/krem-late-oreo.png",
+      "price": 55
+    },
+    {
+      "id": 13,
+      "name": "Snickers Cream Latte",
+      "shop": 86,
+      "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/krem-late-snikers.png",
+      "price": 55
+    },
+    {
+      "id": 14,
+      "name": "Banana & Berry Milkshake",
+      "shop": 86,
+      "thumbnail": "https://lvivcroissants.com/ua/wp-content/uploads/sites/3/2022/01/molochno-yagidnyj.png",
+      "price": 59
+    },
+    {
+      "id": 15,
+      "name": "Піца Bianco Verde",
+      "shop": 85,
+      "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/A7493501-0C16-11ED-A793-1739108D572E-1969%D1%851100_0001_Bianco-Verde.png?alt=media&token=c2d7c3dc-3211-4b9f-b5a2-7cdffce981fa&w=991&h=700&format=webp&mode=fit&q=60",
+      "price": 279
+    },
+    {
+      "id": 16,
+      "name": "Піца Карбонара",
+      "shop": 85,
+      "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/BC937B41-0C12-11ED-A793-1739108D572E-1969%D1%851100_0005_%D0%9A%D0%B0%D1%80%D0%B1%D0%BE%D0%BD%D0%B0%D1%80%D0%B0-%D0%B7-%D0%BF%D0%BE%D0%BC%D1%96%D0%B4%D0%BE%D1%80%D0%B0%D0%BC%D0%B8-%D1%87%D0%B5%D1%80%D1%96.png?alt=media&token=7046da0c-c596-4032-86dc-ffd7824b40a6&w=991&h=700&format=webp&mode=fit&q=60",
+      "price": 249
+    },
+    {
+      "id": 17,
+      "name": "Піца Маргарита",
+      "shop": 85,
+      "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/59A87E81-0C13-11ED-A686-93C9D3D494AC-1969%D1%851100_0004_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0.png?alt=media&token=14740ecf-8505-4897-84fc-7e2a2d55b163&w=991&h=700&format=webp&mode=fit&q=60",
+      "price": 129
+    },
+    {
+      "id": 18,
+      "name": "Піца Пепероні",
+      "shop": 85,
+      "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/CC2B10C1-0C1E-11ED-819F-49BE3BB04282-1969%D1%851100_0008_%D0%9F%D0%B5%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D1%96_%D1%81%D0%B6%D0%B0%D1%82%D0%B8%D0%B9.png?alt=media&token=0004383d-4148-41eb-988d-e6f8c82ff9f4&w=991&h=700&format=webp&mode=fit&q=60",
+      "price": 199
+    },
+    {
+      "id": 19,
+      "name": "Піца Цезаре Verde",
+      "shop": 85,
+      "thumbnail": "https://x100-venus-pc-ua.gumlet.io/SKU/SUSHI-MASTER/%D0%9F%D1%96%D1%86%D0%B0/D50008C1-0C11-11ED-A793-1739108D572E-1969%D1%851100_0006_%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D0%B5-Verde.png?alt=media&token=bdf6ac82-177a-461b-8f29-3348182266ed&w=991&h=700&format=webp&mode=fit&q=60",
+      "price": 249
+    }
+  ],
+  "shops": [
+    {
+      "id": 89,
+      "name": "McDonald's",
+      "location": [
+        "49.236430879254925, 28.47227806874643",
+        "49.22601818896907, 28.41265893497705",
+        "49.237915535697354, 28.405195381646255"
+      ]
+    },
+    {
+      "id": 88,
+      "name": "KFC",
+      "location": [
+        "49.22817722674944, 28.42675520795919"
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Kebab House",
+      "location": [
+        "49.24684065091503, 28.49251203680314"
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Lviv Croissants",
+      "location": [
+        "49.226631331610896, 28.419770384622478",
+        "49.233637501474256, 28.45693507299006",
+        "49.233805637342016, 28.47118296737578"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Celentano Pizza",
+      "location": [
+        "49.227804774672244, 28.40457834157886",
+        "49.22825318865338, 28.450497760231634",
+        "49.23860675600464, 28.4895443068819"
+      ]
+    }
+  ],
+  "orderHistory": [
 
-    "shops": [
-        {
-            "id": 89,
-            "name": "McDonald's",
-            "location": ["49.236430879254925, 28.47227806874643", "49.22601818896907, 28.41265893497705", "49.237915535697354, 28.405195381646255"]
-            
-        },
-        {
-            "id": 88,
-            "name": "KFC",
-            "location": ["49.22817722674944, 28.42675520795919"]
-        },
-        {
-            "id": 87,
-            "name": "Kebab House",
-            "location": ["49.24684065091503, 28.49251203680314"]
-        },
-        {
-            "id": 86,
-            "name": "Lviv Croissants",
-            "location": ["49.226631331610896, 28.419770384622478", "49.233637501474256, 28.45693507299006", "49.233805637342016, 28.47118296737578"]
-        },
-        {
-            "id": 85,
-            "name": "Celentano Pizza",
-            "location": ["49.227804774672244, 28.40457834157886", "49.22825318865338, 28.450497760231634", "49.23860675600464, 28.4895443068819"]
-        }
-    ],
-
-    "history": [
-
-    ]
+  ]
 }

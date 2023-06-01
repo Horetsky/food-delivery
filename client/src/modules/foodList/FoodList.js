@@ -49,6 +49,7 @@ const FoodList = () => {
         } else {
             dispatch({type: "SET_ORDER_ITEM", payload: prop})
             dispatch({type: "SET_SHOP_LOCK", payload: prop.shop[0].id})
+            dispatch({type: "SET_DESTINATION_DATA", payload: prop.shop[0]?.location})
         }
     }
     
