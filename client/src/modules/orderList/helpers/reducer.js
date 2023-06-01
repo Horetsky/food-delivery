@@ -14,6 +14,7 @@ export const orderListSlice = (state = defaultState, action) => {
             return {...state, orderSum: action.payload};
         case"SET_SHOP_LOCK":
             return {...state, shopLock: action.payload};
+        // case"CLEAR_ORDER_ITEMS"
         default: return state
     }
 }

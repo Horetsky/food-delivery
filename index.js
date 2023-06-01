@@ -46,10 +46,16 @@ app.post("/order", (req, res) => {
     try {
         fs.writeFileSync('./db.json', JSON.stringify(config, null, 2), 'utf8');
         console.log('Data successfully saved to disk');
+        res.sendStatus(200)
       } catch (error) {
         console.log('An error has occurred ', error);
+        res.sendStatus(400)
       }
    }
+})
+
+app.get("/orderhistory", (req, res) => {
+    res.json(db.orderHistory)
 })
 
 // Serve the static files from the React app

@@ -5,7 +5,8 @@ import {
   productFilters,
   orderListSlice,
   foodListSlice,
-  orderMapSlice
+  orderMapSlice,
+  orderHistorySlice
 } from './../modules'
 export const store = configureStore({
     reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
       foodListSlice,
       productFilters,
       orderListSlice,
-      orderMapSlice
+      orderMapSlice,
+      orderHistorySlice
     }
   })

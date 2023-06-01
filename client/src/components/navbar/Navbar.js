@@ -13,6 +13,10 @@ const Navbar = ({activePage}) => {
                 <NavLink to={ROUTES.cart} >
                     Cart
                 </NavLink>
+
+                <NavLink to={ROUTES.history} >
+                    History
+                </NavLink>
             </ul>
         </nav>
     );

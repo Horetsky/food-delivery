@@ -1,0 +1,42 @@
+.history-search-form {
+
+    .order-input-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        
+        input {
+            width: 100%;
+            border: 1px #000 solid;
+            padding: 4px 6px;
+            border-radius: 8px;
+        }
+    }
+}
+
+.search-history-results-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+
+    .single-order-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    
+        .order-from {
+            font-weight: 800;
+            font-size: 25px;
+        }
+        .history-order-total {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .order-history-cards {
+            margin-top: 0 !important;
+        }
+    }
+    
+}

@@ -10,6 +10,9 @@ import { orderMapSlice } from "./orderMap/reducer";
 import OrderList from "./orderList/OrderList";
 import { orderListSlice } from "./orderList/helpers/reducer";
 
+import SearchHistory from "./searchHistory/SearchHistory";
+import { orderHistorySlice } from "./searchHistory/helpers/reducer";
+
 export {
     Header,
     FoodList,
@@ -21,5 +24,8 @@ export {
     orderMapSlice,
 
     OrderList,
-    orderListSlice
+    orderListSlice,
+
+    SearchHistory,
+    orderHistorySlice
 }

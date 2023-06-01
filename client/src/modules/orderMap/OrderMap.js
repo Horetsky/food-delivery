@@ -79,6 +79,8 @@ const OrderForm = () => {
     const userEmail = useRef();
     const userPhone = useRef();
     const userName = useRef();
+    const formRef = useRef()
+    const dispatch = useDispatch()
 
     const {
         orderList,
@@ -90,16 +92,23 @@ const OrderForm = () => {
         if (userAddress.current.value === '' || orderList.length === 0) return
         axios
             .post('http://localhost:5000/order', {
+                orderSum,
+                address: userAddress.current.value,
+                shop: orderList[0].shop.map(shop => ({
+                    id: shop.id,
+                    name: shop.name,
+                    location: shop.location[0]
+                })),
                 user: {
                     name: userName.current.value,
                     email: userEmail.current.value,
                     phone: userPhone.current.value,
-                    address: userAddress.current.value
                 },
                 list: orderList.map(item => ({
                     id: item.id,
                     name: item.name,
                     price: item.price,
+                    thumbnail: item.thumbnail,
                     shop: item.shop.map(shop => ({
                         id: shop.id,
                         name: shop.name,
@@ -108,12 +117,19 @@ const OrderForm = () => {
                 }))
                 
             })
+            .then(() => {
+                formRef.current.reset();
+                dispatch({type:"REMOVE_ORDER_ITEM", payload: orderList.filter(item => item.id === null)})
+                dispatch({type: "SET_SHOP_LOCK", payload: 'none'})
+            })
             .catch(e => console.log(e))
+
     }
 
     return (
         <form
             className='order-form'
+            ref={formRef}
         >
             <div className="order-input-item">
                 <span>Адреса</span>

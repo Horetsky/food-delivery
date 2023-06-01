@@ -14,3 +14,14 @@ export const transformFoodItems = (data, shops) => {
         thumbnail: data.thumbnail
     }
 }
+
+export const transformOrderHistory = (data) => {
+
+    return {
+        id: data.id,
+        address: data.order.address,
+        shop: data.order.shop,
+        orderSum: data.order.orderSum,
+        foodList: data.order.list
+    }
+}

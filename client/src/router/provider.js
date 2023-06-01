@@ -3,7 +3,8 @@ import { ROUTES } from './routes';
 
 import {
     Home,
-    Cart
+    Cart,
+    HistoryPage
 } from '../pages'
 
 export const AppRouterProvider = createBrowserRouter([
@@ -14,5 +15,9 @@ export const AppRouterProvider = createBrowserRouter([
     {
         path: ROUTES.cart,
         element: <Cart />
+    },
+    {
+        path: ROUTES.history,
+        element: <HistoryPage />
     }
 ])

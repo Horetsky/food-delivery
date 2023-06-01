@@ -1,4 +1,5 @@
 export const ROUTES = {
     app: '/',
-    cart: '/cart'
+    cart: '/cart',
+    history: '/history'
 }
