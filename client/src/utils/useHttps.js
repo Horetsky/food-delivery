@@ -6,7 +6,7 @@ export default function useHttp() {
     const reqestSettings = {
         'Content-Type': 'application/json'
     }
-    const getRequest = useCallback( async (url) => { 
+    const getRequest = useCallback( async (url, params) => { 
         const response = await axios
                 .get(`${SERVER}${url}`, {
                     headers: reqestSettings

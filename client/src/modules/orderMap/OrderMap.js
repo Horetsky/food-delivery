@@ -8,7 +8,7 @@ import {
 } from '@react-google-maps/api';
 
 import './style.scss'
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import OrderThanks from '../../components/orderThanks/OrderThanks';
 import OrderFaild from '../../components/orderThanks/OrderFaild';
 
@@ -98,7 +98,7 @@ const OrderForm = () => {
                     email: userEmail.current.value,
                     phone: userPhone.current.value,
                 },
-                list: orderList.map(item => ({
+                order: orderList.map(item => ({
                     id: item.id,
                     name: item.name,
                     price: item.price,

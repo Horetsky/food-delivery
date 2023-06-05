@@ -1,5 +1,4 @@
 import {
-    Header,
     FoodList,
     ProductFilters
 } from '../../modules'
@@ -7,11 +6,8 @@ import {
 const Home = () => {
     return (
         <div>
-            <Header />
-            <div className='app-main-container'>
-                <ProductFilters />
-                <FoodList />
-            </div>
+            <ProductFilters />
+            <FoodList />
         </div>
     );
 };

@@ -1,61 +1,59 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require("mongoose");
+const Product = require("./models/products");
+const Shop = require("./models/shops");
+const Order = require("./models/orderHistory");
 
-const fs = require('fs');
-const crypto = require("crypto")
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const db = require('./db.json')
 const app = express();
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+const dbUri = "mongodb+srv://nadvorniyoleh:47HaxbHwMlf55Ssy@cluster0leh.kpbqaf4.mongodb.net/?retryWrites=true&w=majority"
+
+async function connectToDb() {
+    try {
+        await mongoose.connect(dbUri);
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+connectToDb()
+
+app.post("/login", (req, res) => {
+
+})
 app.get("/products", (req, res) => {
-    res.json(db.products)
+    Product
+        .find({})
+        .then(products => res.json(products))
+        .catch(err => console.log(err))
 })
 app.get("/shops", (req, res) => {
-    res.json(db.shops)
+    Shop
+        .find({})
+        .then(shops => res.json(shops))
+        .catch(err => console.log(err))
 })
 
 app.post("/order", (req, res) => {
-    fs.readFile('./db.json', 'utf8', (error, data) => {
-        if(error){
-           console.log(error);
-           return;
-        }
-        writeData(JSON.parse(data))
-   })
-   
-   const writeData = (data) => {
-    const uuid = crypto.randomUUID()
-    const arr = []
-    arr.push(...data.orderHistory)
-
-    const history = arr.push({
-        "id": uuid,
-        "order": req.body
-    })
-
-    const config = {
-        ...data,
-        orderHistory: arr
-    }
-
-    try {
-        fs.writeFileSync('./db.json', JSON.stringify(config, null, 2), 'utf8');
-        console.log('Data successfully saved to disk');
-        res.sendStatus(200)
-      } catch (error) {
-        console.log('An error has occurred ', error);
-        res.sendStatus(400)
-      }
-   }
+    const order = new Order(req.body)
+    order
+        .save()
+        .then(() => res.json({ status: "success" }))
+        .catch(err => console.log(err))
 })
 
 app.get("/orderhistory", (req, res) => {
-    res.json(db.orderHistory)
+    Order
+        .find({})
+        .then(orders => res.json(orders))
+        .catch(err => console.log(err))
 })
 
 // Serve the static files from the React app

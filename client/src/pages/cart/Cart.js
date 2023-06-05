@@ -8,14 +8,11 @@ import {
 import './style.scss'
 const Cart = () => {
     return (
-        <div>
-            <Header />
-            <div className='app-main-container order-container'>
-                <div className='order-form'>
-                    <OrderMap />
-                </div>
-                <OrderList />
+        <div className='order-container'>
+            <div className='order-form'>
+                <OrderMap />
             </div>
+            <OrderList />
         </div>
     );
 };
