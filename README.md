@@ -1,18 +1,69 @@
-# food-delivery
-Getting Started with Create React App
-This project was bootstrapped with Create React App.
 
-Available Scripts
-In the project directory, you can run:
-npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+# Food-Delivery
 
-npm run build
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_**This application was created as a test task.**_
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+This web application is an online shopping platform that allows you to buy products from various stores in your area. You can add them to your cart. This web application aims to provide you with a convenient and hassle-free way of shopping online.
 
-See the demo: https://food-delivery-react-app.herokuapp.com/.
+
+
+
+
+
+## Features
+The following functionality is implemented in this application:
+
+    1. Add products to your cart
+    2. View available stores in your area
+    3. Place your order
+    4. View your order history
+
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`REACT_APP_GOOGLE_MAP_API_KEY`
+
+`REACT_APP_SERVER_URL`
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+
+## Tech Stack
+
+**Client:** React, Redux, SASS
+
+**Server:** Node, Express, MongoDB
+
+
+## Demo
+
+See the demo: https://food-delivery-react-app.herokuapp.com/
+
