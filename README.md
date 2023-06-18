@@ -13,10 +13,11 @@ This web application is an online shopping platform that allows you to buy produ
 ## Features
 The following functionality is implemented in this application:
 
-    1. Add products to your cart
-    2. View available stores in your area
-    3. Place your order
-    4. View your order history
+    1. Firebase Authentification
+    2. Add products to your cart
+    3. View available stores in your area
+    4. Place your order
+    5. View your order history
 
 
 
