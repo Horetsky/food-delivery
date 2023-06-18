@@ -1,8 +1,6 @@
 .app-header {
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .logo-nav-wrapper {
@@ -10,5 +8,11 @@
     align-items: center;
     column-gap: 50px
 }
+
+// @media (max-width: 660px) {
+//     ..app-header{
+//         display: none;
+//     }
+// }
 
 

@@ -21,5 +21,13 @@ section {
 .app-main-container {
     margin-top: 50px !important;
     max-width: $container-width;
+    padding: 0 20px;
     margin: 0 auto;
+}
+
+
+@media (max-width: 1401px) {
+    .app-main-container {
+        max-width: 1000px;
+    }
 }

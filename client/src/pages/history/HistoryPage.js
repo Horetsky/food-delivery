@@ -2,7 +2,7 @@ import { Header, SearchHistory } from "../../modules";
 
 const HistoryPage = () => {
     return (
-        <div className='app-main-container'>
+        <div className='search-history-container'>
             <SearchHistory />
         </div>
     );

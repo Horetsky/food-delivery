@@ -1,7 +1,25 @@
 .food-list {
     margin-top: 50px !important;
     overflow: hidden;
+    width: 100% !important;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 2rem;
 }
+
+@media (max-width: 620px) {
+    .food-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .food-list {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+}
+
+// @media (min-width: 900px) {
+//     .food-list { grid-template-columns: repeat(3, 1fr); }
+// }

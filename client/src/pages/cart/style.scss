@@ -5,3 +5,9 @@
     column-gap: 20px;
     grid-template-columns: 3fr 2fr;
 }
+
+@media (max-width: 1015px) {
+    .order-container {
+        grid-template-columns: 1fr;
+    }
+}

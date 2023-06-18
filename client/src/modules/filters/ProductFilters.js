@@ -22,7 +22,6 @@ const ProductFilters = () => {
     return (
         <div className='product-filters'>
             <Filters shops={shops}/>
-            {/* <Sort /> */}
         </div>
     );
 };
@@ -54,12 +53,5 @@ const Filters = ({shops}) => {
         </ul>
     )
 }
-
-const Sort = () => {
-    return (
-        <>filter</>
-    )
-}
-
 
 export default ProductFilters;

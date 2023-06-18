@@ -4,8 +4,8 @@
     justify-content: space-between;
 
     .shop-list-filter {
-        max-width: 70%;
-        // overflow-x: scroll;
+        max-width: 100%;
+        
         display: flex;
         column-gap: 8px;
 
@@ -13,5 +13,12 @@
             background: #000;
             color: #fff;
         }
+    }
+}
+
+@media (max-width: 660px) {
+    .shop-list-filter {
+        overflow-x: scroll;
+        padding-bottom: 10px;
     }
 }

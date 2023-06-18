@@ -18,7 +18,7 @@ const Header = () => {
         dispatch({type: "SET_ORDER_SUM", payload: orderList.reduce((acc, item) => acc + item.price, 0)})
     }, [orderList])
     return (
-        <div className="app-main-container app-header">
+        <div className="app-header">
             <div className="logo-nav-wrapper">
                 <NavLink to={ROUTES.app}>
                     <Logo />

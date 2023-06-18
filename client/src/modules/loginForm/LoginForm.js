@@ -48,7 +48,7 @@ const Login = ( { loginRef, passwordRef, loading} ) => {
             }
 
             <input type="text" placeholder="Login" required ref={loginRef}/>
-            <input type="text" placeholder="Password" required ref={passwordRef}/>
+            <input type="password" placeholder="Password" required ref={passwordRef}/>
             
             <button type="submit" className={loading === 'loading' ? 'loading-btn' : null}>Login</button>
             
