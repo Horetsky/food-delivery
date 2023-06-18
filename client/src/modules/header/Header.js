@@ -25,12 +25,12 @@ const Header = () => {
                 </NavLink>
                 <Navbar activePage={location.pathname}/>
             </div>
-            <NavLink to={ROUTES.cart}>
-                <Cart 
-                    sum={orderSum}
-                    count={orderList.length}
-                />
-            </NavLink>
+            
+            <Cart 
+                sum={orderSum}
+                count={orderList.length}
+            />
+
         </div>
     );
 };

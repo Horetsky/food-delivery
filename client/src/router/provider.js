@@ -6,7 +6,8 @@ import {
     Dashboard,
     Home,
     Cart,
-    HistoryPage
+    HistoryPage,
+    SignupPage
 } from '../pages'
 
 export const AppRouterProvider = createBrowserRouter([
@@ -29,6 +30,11 @@ export const AppRouterProvider = createBrowserRouter([
                 element: <HistoryPage />
             }
         ]
+    },
+
+    {
+        path: ROUTES.signup,
+        element: <SignupPage />
     }
 
 ])

@@ -13,6 +13,8 @@ import { orderListSlice } from "./orderList/helpers/reducer";
 import SearchHistory from "./searchHistory/SearchHistory";
 import { orderHistorySlice } from "./searchHistory/helpers/reducer";
 
+import LoginForm from "./loginForm/LoginForm";
+
 export {
     Header,
     FoodList,
@@ -27,5 +29,7 @@ export {
     orderListSlice,
 
     SearchHistory,
-    orderHistorySlice
+    orderHistorySlice,
+
+    LoginForm
 }

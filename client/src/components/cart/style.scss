@@ -1,24 +1,46 @@
 @import './../../app/vars.scss';
 
-.header-cart {
+.cart-wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 8px;
-    border-radius: 30px;
-    background: $accent-color;
-    padding: 12px 18px;
-    color: #fff;
-    
-    .cart-sum {
-        border-right: #fff 1px solid;
-        padding-right: 8px;
-    }
-    .cart-icon {
+    .header-cart {
         display: flex;
+        column-gap: 8px;
+        border-radius: 30px;
+        background: $accent-color;
+        padding: 12px 18px;
+        color: #fff;
+        
+        .cart-sum {
+            border-right: #fff 1px solid;
+            padding-right: 8px;
+        }
+        .cart-icon {
+            display: flex;
+            svg {
+                width: 20px;
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    .logout-btn {
+        background: $accent-color;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
         svg {
-            width: 20px;
             path {
                 fill: #fff;
             }
+            width: 30px;
+            height: 30px;
         }
     }
 }

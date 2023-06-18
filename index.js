@@ -25,9 +25,6 @@ async function connectToDb() {
 
 connectToDb()
 
-app.post("/login", (req, res) => {
-
-})
 app.get("/products", (req, res) => {
     Product
         .find({})

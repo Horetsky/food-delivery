@@ -1,0 +1,71 @@
+@import '../../app/vars.scss';
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 380px;
+    padding: 15px;
+    margin: auto;
+    overflow: hidden;
+    h1 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+    }
+    input {
+        margin-bottom: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 20px;
+        border: 2px $accent-color solid;
+
+        font-weight: 700;
+        color: $accent-color;
+        letter-spacing: 0.3rem;
+        transition: all .3s;
+        &:hover {
+            background: $accent-color;
+            color: #fff;
+        }
+    }
+
+    .loading-btn {
+        opacity: 0.5;
+        pointer-events: none;
+        
+    }
+
+    .login-form__error {
+        margin-bottom: 10px;
+        color: #fff;
+        background: #E76161;
+        padding: 10px;
+        border-radius: 4px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    span {
+        margin-top: 10px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+
+        a {
+            color: $accent-color;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
