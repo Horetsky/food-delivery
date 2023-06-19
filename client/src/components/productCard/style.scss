@@ -6,9 +6,8 @@
     align-items: center;
     row-gap: 30px;
     background: #fff;
-    width: 290px;
-    width: clamp(250px, 29vw, 290px);
-    // max-height: 350px;
+    width: 100%;
+    max-width: 290px;
     border-radius: 20px;
     padding: 20px;
     .card-img {
@@ -88,14 +87,3 @@
     pointer-events: none;
 }
 
-@media (max-width: 560px) {
-    .product-card {
-        flex-direction: row;
-        column-gap: 20px;
-        width: 100% !important;
-
-        .card-img {
-            width: 200px
-        }
-    }
-}
